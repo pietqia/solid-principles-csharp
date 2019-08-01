@@ -23,7 +23,9 @@ namespace SRP
 
             var saver = new FileSaver();
             saver.SaveToFile(@"Reports", "WorkReport.txt", report);
-            saver.SaveToFile(@"Schedulers", "Schedule.txt", report);
+            saver.SaveToFile(@"Schedulers", "Schedule.txt", scheduler);
+
+            Console.ReadLine();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace SRP
@@ -17,7 +18,14 @@ namespace SRP
 
         public void RemoveEntryAt(int index) => _entries.RemoveAt(index);
 
-        public override string ToString() =>
-            string.Join(Environment.NewLine, _entries.Select(x => $"Code: {x.ProjectCode}, Name: {x.ProjectName}, Hours: {x.SpentHours}"));
+        public override string ToString() => string.Join(Environment.NewLine, _entries.Select(x => $"Code: {x.ProjectCode}, Name: {x.ProjectName}, Hours: {x.SpentHours}"));
+
+
+        //public void SaveToFile(string directoryPath, string fileName) {
+        //    if (!Directory.Exists(directoryPath))
+        //        Directory.CreateDirectory(directoryPath);
+
+        //    File.WriteAllText(Path.Combine(directoryPath, fileName), ToString());
+        //}
     }
 }
